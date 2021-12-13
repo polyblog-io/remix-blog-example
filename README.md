@@ -1,2 +1,3 @@
 # remix-blog-example
-multi-language blog example with remix
+
+multi-language blog example with remixJS
