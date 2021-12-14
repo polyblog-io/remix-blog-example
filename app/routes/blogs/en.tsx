@@ -1,7 +1,7 @@
 import { useLoaderData, Link } from "remix";
 
-import { getBlogs } from "~/blog";
-import type { Post } from "~/blog";
+import { getBlogs } from "~/blogEn";
+import type { Post } from "~/blogEn";
 
 export const loader = () => {
   return getBlogs();
