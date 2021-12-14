@@ -1,8 +1,3 @@
-import path from "path";
-import fs from "fs/promises";
-import parseFrontMatter from "front-matter";
-import invariant from "tiny-invariant";
-
 export type Post = {
   id: number;
   title: string;
@@ -11,37 +6,6 @@ export type Post = {
   authorName: string;
   publishDate: string;
 };
-
-export type BlogMarkdownAttributes = {
-  title: string;
-};
-
-// relative to the server output not the source!
-const blogsPath = path.join(__dirname, "..", "blogs");
-
-function isValidBlogAttributes(
-  attributes: any
-): attributes is BlogMarkdownAttributes {
-  return attributes?.title;
-}
-
-export async function getBlog() {
-  const dir = await fs.readdir(blogsPath);
-  return Promise.all(
-    dir.map(async (filename) => {
-      const file = await fs.readFile(path.join(blogsPath, filename));
-      const { attributes } = parseFrontMatter(file.toString());
-      invariant(
-        isValidBlogAttributes(attributes),
-        `${filename} has bad meta data!`
-      );
-      return {
-        title: filename.replace(/\.md$/, ""),
-        id: attributes.title,
-      };
-    })
-  );
-}
 
 export const getBlogs = () => {
   const blogs: Post[] = [
