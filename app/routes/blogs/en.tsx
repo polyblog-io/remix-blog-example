@@ -13,9 +13,9 @@ export default function Blogs() {
     <div>
       <div className="row row-cols-1 row-cols-md-2 g-4">
         {blogs.map((blog) => (
-          <div key={blog.id} className="col-md-4">
-            <Link to={blog.title} className="text-decoration-none">
-              <div className="card h-100">
+          <div key={blog.id} className="col-md-6 col-lg-4 col-12">
+            <Link to={blog.shortDesc} className="text-decoration-none">
+              <div className="card h-100 shadow">
                 <img
                   src={blog.imgUrl}
                   className="card-img-top"

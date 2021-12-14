@@ -1,3 +1,5 @@
+import notFound from "../public/images/notFound.png";
+
 import {
   Link,
   Links,
@@ -71,13 +73,20 @@ export function CatchBoundary() {
       break;
     case 404:
       message = (
-        <p>
-          Oops! Looks like you tried to visit a page that does not exist.
-          <br />{" "}
-          <Link to="/" className="btn btn-info my-2">
-            Back to home
-          </Link>
-        </p>
+        <div className="row justify-content-between align-items-center">
+          <div className="col-md-6">
+            <p>
+              Oops! Looks like you tried to visit a page that does not exist.
+              <br />{" "}
+              <Link to="/" className="btn btn-info my-2">
+                Back to home
+              </Link>
+            </p>
+          </div>
+          <div className="col-md-6">
+            <img className="img-fluid" src={notFound} alt="404 image" />
+          </div>
+        </div>
       );
       break;
 
