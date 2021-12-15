@@ -1,5 +1,5 @@
 import { useLoaderData } from "remix";
-import aboutUSImg from "../../../public/images/aboutUs.png";
+import aboutUSImg from "../../public/images/aboutUs.png";
 
 export const loader = () => {
   return [

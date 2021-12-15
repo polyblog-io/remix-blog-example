@@ -131,6 +131,7 @@ function Document({ children }: { children: React.ReactNode; title?: string }) {
         />
         {/* Site Title */}
         <title>Welcome | Polyblog</title>
+
         <Links />
       </head>
       <body>
@@ -154,8 +155,12 @@ function Layout({ children }: { children: React.ReactNode }) {
     <div className="remix-app">
       <nav className="navbar navbar-expand-lg navbar-light bg-info">
         <div className="container">
-          <Link className="navbar-brand text-color fw-bold" to="/">
-            Polyblog Blog
+          <Link
+            className="navbar-brand text-color fw-bold"
+            to="/"
+            style={{ color: "RGBA(0,0,0,.55)" }}
+          >
+            Polyblog
           </Link>
           <button
             className="navbar-toggler"
@@ -171,7 +176,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
               <li className="nav-item my-auto">
-                <Link className="nav-link" to="/blogs/en">
+                <Link className="nav-link" to="/blog/en">
                   Blogs
                 </Link>
               </li>
@@ -196,12 +201,12 @@ function Layout({ children }: { children: React.ReactNode }) {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <Link to="/blogs/en" className="dropdown-item">
+                    <Link to="/blog/en" className="dropdown-item">
                       English
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blogs/es" className="dropdown-item">
+                    <Link to="/blog/es" className="dropdown-item">
                       Español
                     </Link>
                   </li>
