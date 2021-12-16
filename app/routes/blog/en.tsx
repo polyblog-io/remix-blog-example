@@ -1,10 +1,10 @@
 import { useLoaderData, Link } from "remix";
 
-import { getPosts } from "~/blogEn";
-import type { Post } from "~/blogEn";
+import { getEnglishPosts } from "~/getEnglishPosts";
+import type { Post } from "~/Post";
 
 export const loader = () => {
-  return getPosts();
+  return getEnglishPosts();
 };
 
 export default function Blogs() {

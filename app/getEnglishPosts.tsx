@@ -1,13 +1,6 @@
-export type Post = {
-  id: number;
-  title: string;
-  imgUrl: string;
-  shortDesc: string;
-  authorName: string;
-  publishDate: string;
-};
+import type { Post } from "~/Post";
 
-export const getPosts = () => {
+export const getEnglishPosts = () => {
   const posts: Post[] = [
     {
       id: 1,
