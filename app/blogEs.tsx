@@ -7,8 +7,8 @@ export type Post = {
   publishDate: string;
 };
 
-export const getBlogs = () => {
-  const blogs: Post[] = [
+export const getPosts = () => {
+  const posts: Post[] = [
     {
       id: 1,
       title: "22 tips increíbles de marketing de contenidos",
@@ -80,5 +80,5 @@ export const getBlogs = () => {
       publishDate: "15 de octubre de 2021",
     },
   ];
-  return blogs;
+  return posts;
 };
