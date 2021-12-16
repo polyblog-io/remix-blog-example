@@ -191,12 +191,12 @@ function Layout({ children }: { children: React.ReactNode }) {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <Link to="/blogs/en" className="dropdown-item">
+                    <Link to="/blog/en" className="dropdown-item">
                       English
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blogs/es" className="dropdown-item">
+                    <Link to="/blog/es" className="dropdown-item">
                       Español
                     </Link>
                   </li>

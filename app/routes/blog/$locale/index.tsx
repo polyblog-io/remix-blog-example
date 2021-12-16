@@ -1,21 +1,22 @@
 import { useLoaderData, Link } from "remix";
 
-import { getSpanishPosts } from "~/getSpanishPosts";
+import { getPosts } from "~/getPosts";
 import type { Post } from "~/Post";
 
-export const loader = () => {
-  return getSpanishPosts();
+export const loader = ({params}) => {
+  const { locale } = params
+  return getPosts(locale);
 };
 
-export default function Blogs() {
+export default function BlogPage() {
   const posts = useLoaderData<Post[]>();
   return (
     <div>
       <div className="row row-cols-1 row-cols-md-2 g-4">
         {posts.map(post => (
-          <div key={post.id} className="col-md-4">
+          <div key={post.id} className="col-md-6 col-lg-4 col-12">
             <Link to={post.title} className="text-decoration-none">
-              <div className="card h-100">
+              <div className="card h-100 shadow">
                 <img
                   src={post.imgUrl}
                   className="card-img-top"
