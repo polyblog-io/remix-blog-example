@@ -171,13 +171,8 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
               <li className="nav-item my-auto">
-                <Link className="nav-link" to="/blogs/en">
-                  Blogs
-                </Link>
-              </li>
-              <li className="nav-item my-auto">
-                <Link className="nav-link" to="/about">
-                  About Us
+                <Link className="nav-link" to="/blog/en">
+                  Blog
                 </Link>
               </li>
               <li className="nav-item dropdown">
