@@ -3,7 +3,7 @@ import headerImg from "../../public/images/headerImg.png";
 export default function IndexRoute() {
   return (
     <div
-      title="Welcome To Polyblog"
+      title="Welcome To My Blog"
       className="row justify-content-between align-items-center my-5"
     >
       <div className="col-md-7">

@@ -130,7 +130,7 @@ function Document({ children }: { children: React.ReactNode; title?: string }) {
           crossOrigin="anonymous"
         />
         {/* Site Title */}
-        <title>Welcome | Polyblog</title>
+        <title>Welcome | My Blog</title>
         <Links />
       </head>
       <body>
@@ -155,7 +155,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <nav className="navbar navbar-expand-lg navbar-light bg-info">
         <div className="container">
           <Link className="navbar-brand text-color fw-bold" to="/">
-            Polyblog Blog
+            My Blog
           </Link>
           <button
             className="navbar-toggler"
@@ -209,7 +209,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <div className="container">{children}</div>
       <footer>
         <div>
-          <p className="text-center">&copy; Polyblog 2021</p>
+          <p className="text-center">&copy; My Blog 2021</p>
         </div>
       </footer>
     </div>
