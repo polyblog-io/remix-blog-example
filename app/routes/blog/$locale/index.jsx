@@ -41,7 +41,7 @@ export default function BlogPage() {
                     <h3 className="card-title my-3 text-dark">{title}</h3>
                     <h5 className="my-3 text-dark">{subtitle}</h5>
                     <p className="text-dark">
-                      Posted by {author} on {creationTime}
+                      Posted by {author} {creationTime}
                     </p>
                   </div>
                 </div>
