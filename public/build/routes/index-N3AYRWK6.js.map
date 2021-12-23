@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\projects\\remix-blog-example\\app\\routes\\index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\projects\\\\remix-blog-example\\\\app\\\\routes\\\\index.jsx\";", "import headerImg from \"../../public/images/headerImg.png\";\r\n\r\nexport default function IndexRoute() {\r\n  return (\r\n    <div\r\n      title=\"Welcome To My Blog\"\r\n      className=\"row justify-content-between align-items-center my-5\"\r\n    >\r\n      <div className=\"col-md-7\">\r\n        <h1 className=\"fw-bold\">\r\n          A Fast And Efficient Content Management System Built For Online\r\n          Businesses\r\n        </h1>\r\n      </div>\r\n      <div className=\"col-md-5\">\r\n        <img className=\"img-fluid\" src={headerImg} alt=\"Header Image\" />\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;;;;;;AAEe,sBAAsB;AACnC,SACE,oCAAC,OAAD;AAAA,IACE,OAAM;AAAA,IACN,WAAU;AAAA,KAEV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,MAAD;AAAA,IAAI,WAAU;AAAA,KAAU,gFAK1B,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,IAAY,KAAK;AAAA,IAAW,KAAI;AAAA;AAAA;",
+  "names": []
+}

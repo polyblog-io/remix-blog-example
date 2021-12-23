@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\projects\\waiterio\\my-remix-blog\\app\\routes\\blog\\$locale\\$slug.jsx?browser"],
+  "sourcesContent": ["export * from \"C:\\\\projects\\\\waiterio\\\\my-remix-blog\\\\app\\\\routes\\\\blog\\\\$locale\\\\$slug.jsx\";"],
+  "mappings": ";;;;;AAAA;",
+  "names": []
+}

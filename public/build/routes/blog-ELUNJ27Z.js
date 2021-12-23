@@ -1,0 +1,1 @@
+import{f as e}from"/build/_shared/chunk-5FAEMRNW.js";import{e as o,f as t}from"/build/_shared/chunk-AKSB5QXU.js";t();t();function r(){return o.createElement("div",null,o.createElement("h1",{className:"fw-bold text-info text-center mb-3 mt-2"},"Posts"),o.createElement("main",null,o.createElement(e.Outlet,null)))}export{r as default};

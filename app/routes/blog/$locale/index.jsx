@@ -14,11 +14,11 @@ export const loader = async () => {
 };
 
 export default function BlogPage() {
-  const article = useLoaderData();
+  const articles = useLoaderData();
   return (
     <>
       <div className="row row-cols-1 row-cols-md-2 g-4">
-        {article.map(
+        {articles.map(
           ({
             _id,
             locale,

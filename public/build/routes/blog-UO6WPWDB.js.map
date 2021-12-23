@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\projects\\waiterio\\my-remix-blog\\app\\routes\\blog.jsx?browser", "../../../app/routes/blog.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\projects\\\\waiterio\\\\my-remix-blog\\\\app\\\\routes\\\\blog.jsx\";", "import { Outlet } from \"remix\";\r\n\r\nexport default function BlogsRoute() {\r\n  return (\r\n    <div>\r\n      <h1 className=\"fw-bold text-info text-center mb-3 mt-2\">Posts</h1>\r\n      <main>\r\n        <Outlet />\r\n      </main>\r\n    </div>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;AAAA;;;ACAA;AAEe,sBAAsB;AACnC,SACE,oCAAC,OAAD,MACE,oCAAC,MAAD;AAAA,IAAI,WAAU;AAAA,KAA0C,UACxD,oCAAC,QAAD,MACE,oCAAC,gCAAD;AAAA;",
+  "names": []
+}
