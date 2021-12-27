@@ -1,30 +1,30 @@
-import { Outlet, LiveReload, Link, Links, Meta } from "remix";
-import globalStylesUrl from "~/styles/global.css";
+import { Outlet, LiveReload, Link, Links, Meta } from 'remix';
+import globalStylesUrl from '~/styles/global.css';
 
 export const links = () => [
-  { rel: "stylesheet", href: globalStylesUrl },
+  { rel: 'stylesheet', href: globalStylesUrl },
 
   // Google Font(poppins)
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "true" },
+  { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+  { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'true' },
   {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap",
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap',
   },
 
   // Bootstrap CSS CDN
   {
-    rel: "stylesheet",
-    href: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
+    rel: 'stylesheet',
+    href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
     integrity:
-      "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
-    crossOrigin: "anonymous",
+      'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC',
+    crossOrigin: 'anonymous',
   },
 ];
 
 export const meta = () => {
-  const description = "A cool blog builds with Polyblog Api";
-  const keywords = "remix, react, javascript, polyblog";
+  const description = 'A cool blog builds with Polyblog Api';
+  const keywords = 'remix, react, javascript, polyblog';
   return {
     description,
     keywords,
@@ -46,11 +46,11 @@ function Document({ children, title }) {
       <head>
         <Meta />
         <Links />
-        <title>{title ? title : "Welcome | My Blog"}</title>
+        <title>{title ? title : 'Welcome | My Blog'}</title>
       </head>
       <body>
         {children}
-        {process.env.NODE_ENV === "development" ? <LiveReload /> : null}
+        {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
 
         {/* Bootstrap JS CDN */}
         <script
@@ -72,7 +72,7 @@ function Layout({ children }) {
           <Link
             className="navbar-brand text-color fw-bold"
             to="/"
-            style={{ color: "RGBA(0,0,0,.55)" }}
+            style={{ color: 'RGBA(0,0,0,.55)' }}
           >
             My Blog
           </Link>
@@ -143,8 +143,8 @@ export function ErrorBoundary({ error }) {
   return (
     <Document>
       <Layout>
-        <h1>Error</h1>
-        <p>{error.message}</p>
+        <h1 className="text-center">Error</h1>
+        <p className="text-center">{error.message}</p>
       </Layout>
     </Document>
   );

@@ -1,50 +1,56 @@
-// import { getArticles } from '@polyblog/polyblog-js-client';
+import { getArticles } from '@polyblog/polyblog-js-client';
+import { useLoaderData } from 'remix';
 
-// export async function loader({ locales }) {
-//   let articles = await getArticles({
-//     organizationId: 'c398463407b5c12f27f9aed4',
-//     project: 'polyblog',
-//     published: true,
-//   });
+export const loader = async ({ params }) => {
+  const { locale, slug } = params;
+  console.log('locale', locale);
+  console.log('slug', slug);
 
-//   articles = articles.filter(({ locale }) => locales.includes(locale));
+  const articles = await getArticles({
+    organizationId: 'c398463407b5c12f27f9aed4',
+    project: 'polyblog',
+    locale,
+    slugLocalized: slug,
+  });
 
-//   const paths = articles.map(article => ({
-//     locale: article.locale,
-//     params: { slug: article.slugLocalized },
-//   }));
+  console.log('Articles', articles);
+  const article = articles?.[0];
+  return article;
+};
 
-//   return { paths, fallback: 'blocking' };
-// }
+export default function PostPage() {
+  const article = useLoaderData();
+  return (
+    <div>
+      {article && (
+        <>
+          <div
+            style={{
+              width: '100%',
+              height: '400px',
+              backgroundImage: `url(${article?.coverUrl})`,
+              backgroundSize: 'cover',
+            }}
+            className="mb-5"
+          >
+            <h2 className="text-center pt-5">{article?.title}</h2>
+            <h4 className="text-center pt-3">{article?.subtitle}</h4>
+            <p className="text-center">
+              <i>
+                Posted by <span>{article?.author}</span> on{' '}
+                <span>
+                  {new Date(article?.creationTime).toLocaleString({
+                    dateStyle: 'long',
+                  })}
+                </span>
+              </i>
+            </p>
+          </div>
 
-// export async function loader({ locale, params }) {
-//   // console.log('getStaticProps', params)
-
-//   const { slug } = params;
-//   const articles = await getArticles({
-//     organizationId: 'c398463407b5c12f27f9aed4',
-//     project: 'polyblog',
-//     locale,
-//     slugLocalized: slug,
-//   });
-
-//   return {
-//     props: {
-//       article: articles[0],
-//     },
-//   };
-// }
-
-// export default function Article({ article }) {
-//   return (
-//     <div>
-//       {article && (
-//         <div>
-//           <h1>{article.title}</h1>
-//           <div>{article.subtitle}</div>
-//           <div dangerouslySetInnerHTML={{ __html: article.content }} />
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
+          <div dangerouslySetInnerHTML={{ __html: article?.content }} />
+          <span></span>
+        </>
+      )}
+    </div>
+  );
+}
