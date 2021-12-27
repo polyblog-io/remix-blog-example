@@ -9,7 +9,7 @@ export const loader = async ({ params }) => {
     published: true,
     locale,
   });
-  // console.log(articles);
+
   return articles;
 };
 
@@ -23,6 +23,7 @@ export default function BlogPage() {
             _id,
             locale,
             slug,
+            slugLocalized,
             coverUrl,
             title,
             author,
@@ -32,7 +33,7 @@ export default function BlogPage() {
             <div key={_id} className="col-md-6 col-lg-4 col-12">
               <Link
                 key={_id}
-                to={`/${locale}/${slug}`}
+                to={`/blog/${locale}/${slugLocalized}`}
                 className="text-decoration-none"
               >
                 <div className="card h-100 shadow">
@@ -41,7 +42,10 @@ export default function BlogPage() {
                     <h3 className="card-title my-3 text-dark">{title}</h3>
                     <h5 className="my-3 text-dark">{subtitle}</h5>
                     <p className="text-dark">
-                      Posted by {author} {creationTime}
+                      Posted by {author} on{' '}
+                      {new Date(creationTime).toLocaleString(locale, {
+                        dateStyle: 'long',
+                      })}
                     </p>
                   </div>
                 </div>
