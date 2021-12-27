@@ -1,8 +1,8 @@
 import { getArticles } from '@polyblog/polyblog-js-client';
 import { useLoaderData, Link } from 'remix';
 
-export const loader = async () => {
-  locale = 'en';
+export const loader = async ({ params }) => {
+  const locale = params.locale;
   let articles = await getArticles({
     organizationId: 'c398463407b5c12f27f9aed4',
     project: 'polyblog',
