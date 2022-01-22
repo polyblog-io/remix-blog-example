@@ -10,7 +10,7 @@
     "start": "remix-serve build"
   },
   "dependencies": {
-    "@polyblog/polyblog-js-client": "0.0.15",
+    "@polyblog/polyblog-js-client": "0.0.16",
     "@remix-run/react": "^1.1.1",
     "@remix-run/serve": "^1.1.1",
     "react": "^17.0.2",

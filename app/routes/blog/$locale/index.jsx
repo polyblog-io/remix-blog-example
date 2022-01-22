@@ -4,8 +4,7 @@ import { useLoaderData, Link } from 'remix';
 export const loader = async ({ params }) => {
   const locale = params.locale;
   let articles = await getArticles({
-    organizationId: 'c398463407b5c12f27f9aed4',
-    blog: 'polyblog',
+    blogId: '4217f90b8eaa86551e7f7d55',
     published: true,
     locale,
   });
