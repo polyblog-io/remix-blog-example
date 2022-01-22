@@ -5,7 +5,7 @@ export const loader = async ({ params }) => {
   const locale = params.locale;
   let articles = await getArticles({
     organizationId: 'c398463407b5c12f27f9aed4',
-    project: 'polyblog',
+    blog: 'polyblog',
     published: true,
     locale,
   });
