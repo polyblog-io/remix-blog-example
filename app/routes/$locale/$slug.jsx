@@ -5,6 +5,7 @@ export const loader = async ({ params }) => {
   const { locale, slug } = params;
 
   const articles = await getArticles({
+    // signup at https://www.polyblog.io/signup to get your blogId
     blogId: '4217f90b8eaa86551e7f7d55',
     locale,
     slugLocalized: slug,
@@ -14,7 +15,7 @@ export const loader = async ({ params }) => {
   return article;
 };
 
-export default function PostPage() {
+export default function ArticlePage() {
   const article = useLoaderData();
   return (
     <div>
@@ -33,12 +34,7 @@ export default function PostPage() {
             <h4 className="text-center pt-3">{article?.subtitle}</h4>
             <p className="text-center">
               <i>
-                Posted by <span>{article?.author}</span> on{' '}
-                <span>
-                  {new Date(article?.creationTime).toLocaleString({
-                    dateStyle: 'long',
-                  })}
-                </span>
+                Posted by <span>{article?.author}</span> on <span></span>
               </i>
             </p>
           </div>

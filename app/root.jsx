@@ -1,9 +1,6 @@
 import { Outlet, LiveReload, Link, Links, Meta } from 'remix';
-import globalStylesUrl from '~/styles/global.css';
 
 export const links = () => [
-  { rel: 'stylesheet', href: globalStylesUrl },
-
   // Bootstrap CSS CDN
   {
     rel: 'stylesheet',
