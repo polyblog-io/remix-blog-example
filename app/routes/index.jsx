@@ -1,20 +1,13 @@
-import headerImg from "../../public/images/headerImg.png";
+import { redirect } from 'remix';
 
-export default function IndexRoute() {
-  return (
-    <div
-      title="Welcome To My Blog"
-      className="row justify-content-between align-items-center my-5"
-    >
-      <div className="col-md-7">
-        <h1 className="fw-bold">
-          A Fast And Efficient Content Management System Built For Online
-          Businesses
-        </h1>
-      </div>
-      <div className="col-md-5">
-        <img className="img-fluid" src={headerImg} alt="Header Image" />
-      </div>
-    </div>
-  );
+export function loader({ request }) {
+  let languageHeader = request.headers.get('accept-language');
+  let locale = languageHeader?.split(',')[0] || 'en';
+  let language = locale.split('-')[0];
+
+  if (!['en', 'es'].includes(language)) {
+    language = 'en';
+  }
+
+  return redirect(`/${language}`);
 }
