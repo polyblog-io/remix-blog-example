@@ -21,7 +21,6 @@ export default function BlogPage() {
           ({
             _id,
             locale,
-            slug,
             slugLocalized,
             coverUrl,
             title,

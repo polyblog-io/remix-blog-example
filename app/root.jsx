@@ -4,14 +4,6 @@ import globalStylesUrl from '~/styles/global.css';
 export const links = () => [
   { rel: 'stylesheet', href: globalStylesUrl },
 
-  // Google Font(poppins)
-  { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-  { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'true' },
-  {
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap',
-  },
-
   // Bootstrap CSS CDN
   {
     rel: 'stylesheet',
@@ -23,13 +15,14 @@ export const links = () => [
 ];
 
 export const meta = () => {
-  const description = 'A cool blog builds with Polyblog Api';
+  const description = 'A multi-language blog built with Remix';
   const keywords = 'remix, react, javascript, polyblog';
   return {
     description,
     keywords,
   };
 };
+
 export default function App() {
   return (
     <Document>
@@ -89,39 +82,22 @@ function Layout({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Language
-                </a>
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <Link to="/en" className="dropdown-item">
-                      English
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/es" className="dropdown-item">
-                      Español
-                    </Link>
-                  </li>
-                </ul>
+              <li class="nav-item">
+                <Link to="/en" class="nav-link">
+                  English
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/es" class="nav-link">
+                  Español
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <div className="container">{children}</div>
+      <div className="container p-4">{children}</div>
     </>
   );
 }

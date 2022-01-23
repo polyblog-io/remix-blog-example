@@ -3,8 +3,6 @@ import { useLoaderData } from 'remix';
 
 export const loader = async ({ params }) => {
   const { locale, slug } = params;
-  console.log('locale', locale);
-  console.log('slug', slug);
 
   const articles = await getArticles({
     blogId: '4217f90b8eaa86551e7f7d55',
@@ -12,7 +10,6 @@ export const loader = async ({ params }) => {
     slugLocalized: slug,
   });
 
-  console.log('Articles', articles);
   const article = articles?.[0];
   return article;
 };
@@ -47,7 +44,6 @@ export default function PostPage() {
           </div>
 
           <div dangerouslySetInnerHTML={{ __html: article?.content }} />
-          <span></span>
         </>
       )}
     </div>
