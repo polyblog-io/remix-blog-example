@@ -92,7 +92,7 @@ function Layout({ children }) {
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="navbarDropdownMenuLink"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -105,12 +105,12 @@ function Layout({ children }) {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <Link to="/blog/en" className="dropdown-item">
+                    <Link to="/en" className="dropdown-item">
                       English
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blog/es" className="dropdown-item">
+                    <Link to="/es" className="dropdown-item">
                       Español
                     </Link>
                   </li>
@@ -122,13 +122,6 @@ function Layout({ children }) {
       </nav>
 
       <div className="container">{children}</div>
-
-      {/* Footer */}
-      <footer>
-        <div>
-          <p className="text-center">&copy; Blog 2022</p>
-        </div>
-      </footer>
     </>
   );
 }
