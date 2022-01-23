@@ -46,7 +46,7 @@ function Document({ children, title }) {
       <head>
         <Meta />
         <Links />
-        <title>{title ? title : 'Welcome | My Blog'}</title>
+        <title>Blog</title>
       </head>
       <body>
         {children}
@@ -74,7 +74,7 @@ function Layout({ children }) {
             to="/"
             style={{ color: 'RGBA(0,0,0,.55)' }}
           >
-            My Blog
+            Blog
           </Link>
           <button
             className="navbar-toggler"
@@ -89,11 +89,6 @@ function Layout({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
-              <li className="nav-item my-auto">
-                <Link className="nav-link" to="/blog/en">
-                  Blog
-                </Link>
-              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -131,7 +126,7 @@ function Layout({ children }) {
       {/* Footer */}
       <footer>
         <div>
-          <p className="text-center">&copy; My Blog 2021</p>
+          <p className="text-center">&copy; Blog 2022</p>
         </div>
       </footer>
     </>
