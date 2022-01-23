@@ -5,18 +5,12 @@ export const links = () => [
   {
     rel: 'stylesheet',
     href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
-    integrity:
-      'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC',
-    crossOrigin: 'anonymous',
   },
 ];
 
 export const meta = () => {
-  const description = 'A multi-language blog built with Remix';
-  const keywords = 'remix, react, javascript, polyblog';
   return {
-    description,
-    keywords,
+    description: 'A multi-language blog built with Remix',
   };
 };
 
@@ -32,7 +26,7 @@ export default function App() {
 
 function Document({ children, title }) {
   return (
-    <html lang="en">
+    <html>
       <head>
         <Meta />
         <Links />
