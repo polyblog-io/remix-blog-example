@@ -34,12 +34,24 @@ export default function ArticlePage() {
             <h4 className="text-center pt-3">{article?.subtitle}</h4>
             <p className="text-center">
               <i>
-                Posted by <span>{article?.author}</span> on <span></span>
+                Posted by <span>{article?.author}</span> on{' '}
+                <span>
+                  {new Date(article?.creationTime).toLocaleDateString()}
+                </span>
               </i>
             </p>
           </div>
 
-          <div dangerouslySetInnerHTML={{ __html: article?.content }} />
+          <style>
+            {`article img {
+                max-width: 512px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+              }`}
+          </style>
+
+          <article dangerouslySetInnerHTML={{ __html: article?.content }} />
         </>
       )}
     </div>
