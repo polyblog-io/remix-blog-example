@@ -22,7 +22,7 @@ export default function BlogPage() {
           ({
             _id,
             locale,
-            slugLocalized,
+            slug,
             coverUrl,
             title,
             author,
@@ -32,7 +32,7 @@ export default function BlogPage() {
             <div key={_id} className="col-md-6 col-lg-4 col-12">
               <Link
                 key={_id}
-                to={`/${locale}/${slugLocalized}`}
+                to={`/${locale}/${slug}`}
                 className="text-decoration-none"
               >
                 <div className="card h-100 shadow">

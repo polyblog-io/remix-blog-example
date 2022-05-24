@@ -8,7 +8,7 @@ export const loader = async ({ params }) => {
     // signup at https://www.polyblog.io/signup to get your blogId
     blogId: '4217f90b8eaa86551e7f7d55',
     locale,
-    slugLocalized: slug,
+    slug,
   });
 
   const article = articles?.[0];
