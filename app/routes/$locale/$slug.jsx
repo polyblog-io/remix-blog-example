@@ -31,7 +31,7 @@ export default function ArticlePage() {
             className="mb-5"
           >
             <h2 className="text-center pt-5">{article?.title}</h2>
-            <h4 className="text-center pt-3">{article?.subtitle}</h4>
+            <h4 className="text-center pt-3">{article?.description}</h4>
             <p className="text-center">
               <i>
                 Posted by <span>{article?.author}</span> on{' '}

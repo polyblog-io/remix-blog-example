@@ -27,7 +27,7 @@ export default function BlogPage() {
             title,
             author,
             creationTime,
-            subtitle,
+            description,
           }) => (
             <div key={_id} className="col-md-6 col-lg-4 col-12">
               <Link
@@ -39,7 +39,7 @@ export default function BlogPage() {
                   <img src={coverUrl} className="card-img-top" alt={title} />
                   <div className="card-body">
                     <h3 className="card-title my-3 text-dark">{title}</h3>
-                    <h5 className="my-3 text-dark">{subtitle}</h5>
+                    <h5 className="my-3 text-dark">{description}</h5>
                     <p className="text-dark">
                       Posted by {author} on{' '}
                       {new Date(creationTime).toLocaleString(locale, {
